@@ -80,44 +80,44 @@ Special thanks to my friend [Luke Eastwood](https://github.com/LukeEastwood08050
 
 **Login Page**
 
-<img width="1918" height="947" alt="Image" src="https://github.com/user-attachments/assets/241588c4-c83b-454e-b0bd-94bdacc0372f" />
+<img width="1918" height="947" alt="Image" src="https://github.com/user-attachments/assets/69064a91-2f3c-40ef-be83-8c88a496a3c6" />
 
 **Sign Up Page**
 
-<img width="1918" height="945" alt="Image" src="https://github.com/user-attachments/assets/204cb4d8-b472-4f49-803d-a18186da58cf" />
+<img width="1918" height="945" alt="Image" src="https://github.com/user-attachments/assets/01b0b638-4695-4122-8198-d1642c0a8042" />
 
 **Forgot Password Page**
 
-<img width="1918" height="944" alt="Image" src="https://github.com/user-attachments/assets/4812c045-f90d-43ae-8051-8fa45e44efce" />
+<img width="1918" height="944" alt="Image" src="https://github.com/user-attachments/assets/456501d4-f430-4937-b56b-dfb49116d91c" />
 
 **Main Page**
 
-<img width="1918" height="946" alt="Image" src="https://github.com/user-attachments/assets/ab5b8ff9-eb97-44fb-b3ce-c4edb3eba58a" />
+<img width="1918" height="946" alt="Image" src="https://github.com/user-attachments/assets/76f770c4-24eb-4b39-b443-379e4774ff52" />
 
 **Example of Notifications**
 
-<img width="435" height="658" alt="Image" src="https://github.com/user-attachments/assets/0857275a-1a12-4344-a299-251bb356ede3" />
+<img width="435" height="658" alt="Image" src="https://github.com/user-attachments/assets/bd977cc0-74f4-4f96-807f-71d1458c5e29" />
 
 **Example of Saved Vault Record**
 
-<img width="1226" height="291" alt="Image" src="https://github.com/user-attachments/assets/e853730a-9506-4521-a3b5-4ae78d7db147" />
+<img width="1226" height="291" alt="Image" src="https://github.com/user-attachments/assets/e7cba70c-d524-4bec-ac68-6a8fd29e2b99" />
 
 **Generator Page**
 
-<img width="1918" height="944" alt="Image" src="https://github.com/user-attachments/assets/3f564dff-659f-4c12-8e69-66f397e7e503" />
+<img width="1918" height="944" alt="Image" src="https://github.com/user-attachments/assets/b58dffbc-2d3f-483c-80e2-e3468f2fa488" />
 
 **Recycle Bin Page**
 
-<img width="1919" height="944" alt="Image" src="https://github.com/user-attachments/assets/683be4e4-d239-45eb-89d1-1ebd5cdb0c37" />
+<img width="1919" height="944" alt="Image" src="https://github.com/user-attachments/assets/04342ae7-9371-4590-909a-a95c5b615eb4" />
 
 **Example of Saved Recycle Bin Record**
 
-<img width="1230" height="251" alt="Image" src="https://github.com/user-attachments/assets/badf8b31-96a9-4de2-98ab-973217d105f0" />
+<img width="1230" height="251" alt="Image" src="https://github.com/user-attachments/assets/11fc6ffe-3c52-4e0a-a97c-b0d3b45cb437" />
 
 **Settings Page**
 
-<img width="1918" height="944" alt="Image" src="https://github.com/user-attachments/assets/36cf1f21-8836-456a-b59b-e3536c97914a" />
+<img width="1918" height="944" alt="Image" src="https://github.com/user-attachments/assets/56364d9d-d795-4d36-a50f-562ac7f9d8a5" />
 
 ## Demo
-https://github.com/user-attachments/assets/4784fac2-c80a-45b6-b780-d3a2dd49b41c
+https://github.com/user-attachments/assets/8f475e20-7e35-4890-8594-d05ebfad5b4f
 
