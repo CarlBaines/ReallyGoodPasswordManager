@@ -1,0 +1,779 @@
+@import url('common.css');
+
+@keyframes transitionIn{
+    from {
+        opacity: 0.25;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.main-body,
+.nav-pane {
+    background-color: white;
+}
+
+.nav-pane {
+    z-index: 1;
+    left: 0;
+    background: rgb(152, 132, 191);
+    width: 17%;
+    height: 100dvh;
+    box-shadow: -50px 0px 100px;
+    justify-content: center;
+}
+
+.nav-header {
+    position: relative;
+    margin-top: 30px;
+}
+
+.icon-shadow{
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.pm-logo {
+    margin-left: 20px;
+    margin-top: 34px;
+    width: 50px;
+    position: fixed;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.pane-title {
+    margin-left: 80px;
+    margin-top: 30px;
+    position: fixed;
+    font-weight: 600;
+    color: white;
+    font-size: 36px;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 150px 0 0 0;
+}
+
+.vault-link,
+.generator-link,
+.recycle-bin-link {
+    font-size: 18px;
+    font-weight: 550;
+    color: white;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 23px 20px;
+    display: flex;
+    align-items: center;
+    background: rgb(152, 132, 191);
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.vault-link.active,
+.generator-link.active,
+.recycle-bin-link.active {
+    background: #786a94;
+}
+
+.vault-link:hover,
+.generator-link:hover,
+.recycle-bin-link:hover {
+    background: #b6a7d4;
+}
+
+.vault-link img,
+.generator-link img,
+.recycle-bin-link img {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.menu-log-out {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+    position: absolute;
+    bottom: 78px;
+    display: flex;
+    align-items: center;
+    width: 17%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.menu-log-out img {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    margin-right: 20px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.menu-log-out:hover {
+    background: #b6a7d4;
+}
+
+.main-body {
+    animation: transitionIn 2s;
+    background: linear-gradient(0deg, rgba(61, 50, 114, 1) 0%, rgba(152, 128, 194, 1) 100%);
+    right: 0;
+    width: 83%;
+    height: 100dvh;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    margin-top: 30px;
+    right: 30px;
+}
+
+.top-bar img,
+.notification-bell img,
+.account-icon img,
+.settings-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.notification-bell,
+.account-icon,
+.settings-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.top-bar img:hover,
+.notification-bell:hover img,
+.account-icon:hover img,
+.settings-icon:hover img {
+    cursor: pointer;
+}
+
+.main-content-area {
+    padding: 20px;
+    overflow-x: hidden;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+hr {
+    border-top: 2px solid white;
+}
+
+.notification hr {
+    border-top: 2px solid black;
+}
+
+.myvault-page,
+.generator-page,
+.recycle-bin-page {
+    padding: 20px;
+}
+
+.myvault-page h2,
+#generator-page-title,
+.recycle-bin-page h2 {
+    color: white;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.generator-page p,
+.recycle-bin-page p {
+    color: white;
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+#generated-password-container,
+#password-config,
+#password-customiser {
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F1ED;
+}
+
+#generated-password-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+#generated-password {
+    font-family: "Poppins Regular";
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 45px;
+    font-size: 26px;
+}
+
+#generated-password-container hr {
+    border-top: 7px solid red;
+}
+
+#strength-checker {
+    background-color: white;
+    padding-left: 45px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    font-family: "Poppins Regular";
+}
+
+#strength-checker img {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-top: 2.5px;
+}
+
+#password-customiser {
+    font-family: "Poppins Regular";
+    padding-top: 15px;
+    background-color: white;
+}
+
+#password-customiser p {
+    color: #3B3B3B;
+}
+
+#password-customiser hr {
+    margin-top: 10px;
+    border-top: 2px solid #EFEFEF;
+    margin-right: 45px;
+}
+
+#password-customiser label {
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.slide-container{
+    padding-top: 20px;
+    width: 50%;
+    margin-bottom: -25px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin: 0;
+    width: 1em;
+    height: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+
+#add-to-vault{
+    font-family: "Poppins";
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    width: 250px;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#restore-settings{
+    font-family: "Poppins";
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    width: 250px;
+    font-size: 12px;
+} 
+
+.plus {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.add-password-button {
+    margin-top: 40px;
+    border: none;
+    border-radius: 18px;
+    padding: 5px 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 26px;
+    font-family: "Poppins Regular";
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-password-button:active {
+    background-color: #d1d1d1;
+}
+
+.add-password-button:focus {
+    outline: 2px solid rgb(152, 132, 191);
+    outline-offset: 2px;
+}
+
+/* Modals */
+.password-modal-container {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.password-modal-content {
+    background-color: #e5e6e1;
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 30%;
+    position: relative;
+}
+
+.pass-inputs {
+    margin-top: 20px;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+.pass-inputs label {
+    display: block;
+    font-family: "Poppins Regular";
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.pass-inputs input {
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+    height: 50px;
+    padding-left: 10px;
+    width: 80%;
+}
+
+.pass-inputs input:focus {
+    outline: 2px solid rgb(152, 132, 191);
+    outline-offset: 2px;
+}
+
+#edit-password-modal-content {
+    margin: 7% auto;
+}
+
+#modal-title,
+#edit-modal-title {
+    padding-bottom: 25px;
+}
+
+.modal-add-button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 18px;
+    padding: 5px 20px;
+    background-color: rgb(152, 132, 191);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 550;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Notifications Modal */
+.notification-modal-container {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.notifications-modal-content {
+    background-color: white;
+    margin: 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.notifications-modal-content h2 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.notifications-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification {
+    background: #f9f9f9;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.notification-title {
+    font-weight: 600;
+    font-size: 16px;
+    padding-right: 30px;
+}
+
+.notification-content {
+    font-size: 14px;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+.notification-options {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    margin-top: 0;
+}
+
+#notifications-close-button {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+}
+
+#notifications-close-button:hover {
+    color: black;
+}
+
+.notification img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    object-fit: contain;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+}
+
+.account,
+.recyclebin {
+    margin-top: 20px;
+    padding: 20px 15px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-width: 500px;
+    max-width: 90%;
+    height: auto;
+    min-height: 80px;
+    flex-wrap: wrap;
+}
+
+.account p,
+.recyclebin p {
+    color: black;
+    justify-content: flex-start;
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.account img,
+.recyclebin img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+    transition: filter 0.3s ease;
+    margin-right: 20px;
+}
+
+.account-options,
+.recycle-bin-options {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    cursor: pointer;
+    gap: 10px;
+}
+
+/* Text content area for account tiles */
+.account-content, .recyclebin-content {
+    flex: 1;
+    min-width: 0;
+    margin-right: 15px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.account-display-password, .recycled-password {
+    max-width: 100%;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    margin-top: 5px;
+}
+
+/* Dynamic Modal, Security Pin Modal, Add-to-Vault Generator Modal Styling */
+.dynamic-mainpg-modal-container,
+.pin-modal-container,
+.add-to-vault-modal-container {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dynamic-mainpg-modal-content,
+.pin-modal-content,
+.add-to-vault-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e5e6e1;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.ok-button {
+  font-family: "Poppins";
+  margin-top: 20px;
+  border: none;
+  border-radius: 18px;
+  padding: 5px 20px;
+  background-color: rgb(152, 132, 191);
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+  transition: filter 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#dynamic-mainpg-modal-title,
+#pin-modal-title,
+#add-to-vault-modal-title{
+    padding-bottom: 10px;
+}
+
+#dynamic-mainpg-modal-message{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#ok-button{
+    margin: 0 auto;
+}
+
+.edit-password-icon {
+    rotate: 215deg;
+}
+
+.footer{
+    border-top: 3px solid white;
+    color: white;
+    font-family: "Poppins";
+    background-color: #a58fcb;
+    text-align: center;
+    padding: 25px 15px;
+    width: 17%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Custom scrollbar styling to match app theme */
+.main-content-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content-area::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.main-content-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.main-content-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1200px) {
+    .password-modal-content,
+    .dynamic-mainpg-modal-content,
+    .pin-modal-content,
+    .add-to-vault-modal-content {
+        width: 25%;
+        min-width: 400px;
+    }
+    
+    .notifications-modal-content {
+        width: 450px;
+    }
+    
+    .account, .recyclebin {
+        min-width: 500px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .password-modal-content,
+    .dynamic-mainpg-modal-content,
+    .pin-modal-content,
+    .add-to-vault-modal-content {
+        width: 20%;
+        min-width: 450px;
+    }
+    
+    .notifications-modal-content {
+        width: 500px;
+    }
+    
+    .account, .recyclebin {
+        width: 50%;
+    }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}

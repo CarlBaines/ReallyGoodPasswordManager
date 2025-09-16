@@ -1,0 +1,353 @@
+@import url('common.css');
+
+@keyframes transitionIn{
+  from{
+    opacity: 0.25;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 60px;
+    background-color: #a58fcb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid white;
+}
+
+nav img{
+    width: 65px;
+    height: auto;
+    padding-top: 5px;
+    padding-left: 20px;
+    object-fit: contain;
+}
+
+.container{
+    flex: 1;
+    min-height: 100vh;
+    padding: 0 15px 130px;
+    background: linear-gradient(to bottom right, #b3a4d7, #6254a8);
+    position: relative;
+}
+
+.container h1{
+    font-family: "Poppins";
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 120px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.setting-box{
+    animation: transitionIn 2s;
+    font-family: "Poppins";
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: black;
+    background: #e6e6e6;
+    position: relative;
+    border-radius: 25px;
+    display: block;
+    width: 90%;
+    max-width: 750px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.setting-title{
+    font-family: "Poppins";
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.setting-content p{
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#email-display{
+    padding-bottom: 20px;
+    word-break: break-word;
+}
+
+.setting-content button{
+    font-family: "Poppins";
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.setting-content button:hover{
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.footer{
+    border-top: 3px solid white;
+    color: white;
+    font-family: "Poppins";
+    background-color: #a58fcb;
+    text-align: center;
+    padding: 25px 15px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Grouped Modal Container Styles */
+.change-email-modal-container,
+.change-password-modal-container,
+.log-out-modal-container,
+.delete-account-modal-container,
+.dynamic-settings-modal-container {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Grouped Modal Content Styles */
+.change-email-modal-content,
+.change-password-modal-content,
+.log-out-modal-content,
+.delete-account-modal-content,
+.dynamic-settings-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e5e6e1;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 30%;
+}
+
+/* Grouped Modal Inputs Styles */
+.change-email-inputs,
+.change-password-inputs,
+.delete-account-inputs {
+    margin-top: 20px;
+}
+
+/* Grouped Modal Label Styles */
+.change-email-inputs label,
+.change-password-inputs label,
+.delete-account-inputs label {
+    display: block;
+    font-family: "Poppins Regular";
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#log-out-modal-title{
+    font-family: "Poppins Regular";
+}
+
+/* Grouped Modal Input Styles */
+.change-email-inputs input,
+.change-password-inputs input,
+.delete-account-inputs input {
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+    height: 50px;
+    padding-left: 10px;
+    width: 80%;
+}
+
+.change-email-inputs input:focus,
+.change-password-inputs input:focus,
+.delete-account-inputs input:focus {
+    outline: 2px solid rgb(152, 132, 191);
+    outline-offset: 2px;
+}
+
+/* Grouped Modal Button Styles */
+.change-email-button,
+.change-password-button,
+.log-out-button,
+.delete-account-button,
+.ok-button {
+    font-family: "Poppins";
+    margin-top: 20px;
+    border: none;
+    border-radius: 18px;
+    padding: 5px 20px;
+    background-color: rgb(152, 132, 191);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#dynamic-settings-modal-title{
+    padding-bottom: 10px;
+}
+
+#dynamic-settings-modal-message{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#ok-button{
+    margin: 0 auto;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1200px) {
+    .setting-box {
+        max-width: 800px;
+        padding: 40px 30px;
+    }
+    
+    .change-email-modal-content,
+    .change-password-modal-content,
+    .log-out-modal-content,
+    .delete-account-modal-content,
+    .dynamic-settings-modal-content {
+        width: 25%;
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .setting-box {
+        max-width: 900px;
+        padding: 50px 40px;
+    }
+    
+    .change-email-modal-content,
+    .change-password-modal-content,
+    .log-out-modal-content,
+    .delete-account-modal-content,
+    .dynamic-settings-modal-content {
+        width: 20%;
+        min-width: 450px;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem;
+        padding-top: 70px;
+    }
+    
+    .setting-box {
+        width: 95%;
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .setting-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav img {
+        width: 50px;
+        padding-left: 10px;
+    }
+    
+    .container h1 {
+        font-size: 1.7rem;
+        padding-top: 65px;
+    }
+    
+    .setting-title {
+        font-size: 1.2rem;
+    }
+    
+    .setting-content p {
+        font-size: 0.9rem;
+    }
+    
+    .setting-content button {
+        width: 90%;
+        padding: 10px 15px;
+    }
+    
+    .footer {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding-bottom: 100px;
+    }
+}

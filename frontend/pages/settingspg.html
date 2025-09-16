@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Really Good Password Manager Settings</title>
+  <link rel="stylesheet" type="text/css" href="../css/settings-style.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/site-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <a href="#" class="navbar-items">
+      <img src="../assets/back-btn.png" alt="Back" id="back-btn" />
+    </a>
+  </nav>
+  <div class="container">
+    <h1>⚙️ Settings</h1>
+    <div class="setting-box">
+      <div class="setting-title">
+        <h2>Account Settings</h2>
+      </div>
+      <div class="setting-content">
+        <p>Change your account settings here.</p>
+        <h3 id="email-display">Email: </h3>
+        <button id="change-email-btn">
+          Change Email
+        </button>
+        <button id="change-master-password-btn">
+          Change Master Password
+        </button>
+        <button id="log-out-modal-btn">Log Out</button>
+        <button id="delete-account-btn">
+          Delete Account
+        </button>
+      </div>
+    </div>
+
+    <!--Change Email Modal-->
+    <div class="change-email-modal-container" id="change-email-modal-container" style="display: none">
+      <div class="change-email-modal-content" id="change-email-modal-content">
+        <button class="close" id="change-email-close-button">&times;</button>
+        <h2 id="change-email-modal-title">Change Email</h2>
+        <form class="change-email-inputs">
+          <div class="form-input">
+            <label for="original-email-input">Original Email:</label>
+            <input type="text" class="original-email-input" id="original-email-input"
+              placeholder="Enter original email..." required>
+          </div>
+          <div class="form-input">
+            <label for="new-email-input">New Email:</label>
+            <input type="text" class="new-email-input" id="new-email-input" placeholder="Enter new email..." required>
+          </div>
+          <button type="submit" class="change-email-button" id="change-email-button">
+            <span class="submit">Change Email</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--Change Master Password Modal-->
+    <div class="change-password-modal-container" id="change-password-modal-container" style="display: none">
+      <div class="change-password-modal-content" id="change-password-modal-content">
+        <button class="close" id="change-password-close-button">&times;</button>
+        <h2 id="change-password-modal-title">Change Master Password</h2>
+        <form class="change-password-inputs">
+          <div class="form-input">
+            <label for="original-password-input">Original Master Password:</label>
+            <input type="password" class="original-password-input" id="original-password-input"
+              placeholder="Enter original password..." required>
+          </div>
+          <div class="form-input">
+            <label for="new-password-input">New Password:</label>
+            <input type="password" class="new-password-input" id="new-password-input"
+              placeholder="Enter new password..." required>
+          </div>
+          <button type="submit" class="change-password-button" id="change-password-button">
+            <span class="submit">Change Password</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--Log Out Modal-->
+    <div class="log-out-modal-container" id="log-out-modal-container" style="display: none">
+      <div class="log-out-modal-content" id="log-out-modal-content">
+        <button class="close" id="log-out-close-button">&times;</button>
+        <h2 id="log-out-modal-title">Are you sure you want to log out?</h2>
+        <button type="submit" class="log-out-button" id="log-out-button">
+          <span class="submit">Log Out</span>
+        </button>
+        </form>
+      </div>
+    </div>
+
+    <!--Delete Account Modal-->
+    <div class="delete-account-modal-container" id="delete-account-modal-container" style="display: none">
+      <div class="delete-account-modal-content" id="delete-account-modal-content">
+        <button class="close" id="delete-account-close-button">&times;</button>
+        <h2 id="delete-account-modal-title">Delete Account</h2>
+        <form class="delete-account-inputs">
+          <div class="form-input">
+            <label for="password-input">Enter the password to your account:</label>
+            <input type="password" class="password-input" id="password-input"
+              placeholder="Enter password to delete account..." required>
+          </div>
+          <button type="submit" class="delete-account-button" id="delete-account-button">
+            <span class="submit">Delete Account</span>
+          </button>
+        </form>
+        </form>
+      </div>
+    </div>
+
+    <!--Dynamic Modal-->
+    <div class="dynamic-settings-modal-container" id="dynamic-settings-modal-container" style="display: none">
+      <div class="dynamic-settings-modal-content" id="dynamic-settings-modal-content">
+        <h2 id="dynamic-settings-modal-title">Lorem Ipsum</h2>
+        <p id="dynamic-settings-modal-message">Lorem Ipsum</p>
+        <button type="submit" class="ok-button" id="ok-button">
+          <span class="submit">Ok</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><a href = "https://github.com/CarlBaines" target = "_blank">2025 | Created by Carl Baines</a></p>
+    </div>
+  </div>
+</body>
+<script src="../js/settings.js"></script>
+
+</html>
