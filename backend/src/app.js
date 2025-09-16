@@ -4,12 +4,19 @@ require("dotenv").config({ path: "../../.env" }); // Load env vars from project 
 const express = require("express");
 const session = require("express-session");
 const SQLiteStore = require("connect-sqlite3")(session);
+const path = require("path");
+const fs = require("fs");
 // Imports CORS which allows resources to be shared across different servers.
 const cors = require("cors");
 const app = express();
 const host = process.env.HOST || "127.0.0.1";
 const port = process.env.PORT || 6969;
-const sessionSecret = process.env.SESSION_SECRET || "garkyspasswordmanager";
+const sessionSecret = process.env.SESSION_SECRET;
+
+if(!sessionSecret){
+  console.error("SESSION_SECRET is not set in environment variables. Exiting.");
+  process.exit(1);
+}
 
 app.use(cors({
   origin: "http://127.0.0.1:8080", // Frontend origin
@@ -22,10 +29,14 @@ app.use(express.static("pages"));
 // Applies middleware.
 app.use(express.json());
 
+// Prepare a writable directory for session DB
+const sessionsDir = path.resolve(__dirname, "..", "data", "sessions");
+fs.mkdirSync(sessionsDir, { recursive: true });
+
 // Applies session middleware.
 app.use(
   session({
-    store: new SQLiteStore({ db: "sessions.sqlite", dir: "./sessions" }), // sqlite session store.
+    store: new SQLiteStore({ db: "sessions.sqlite", dir: sessionsDir }), // sqlite session store.
     secret: sessionSecret,
     resave: false,
     saveUninitialized: false,
