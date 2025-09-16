@@ -55,17 +55,26 @@ This app uses **SQLite** (`backend/src/db/pm_db.db`) to store all data.
    cd ReallyGoodPasswordManager/backend/src
    ```
 
-2. **Install backend dependencies:**
+2. **Configure environment variables:**
+   - Copy `example.env` to `.env` in the project root directory.
+   - Open `.env` and set your `SESSION_SECRET` to a random, secure value. Example:
+     ```env
+     SESSION_SECRET=your_random_secure_secret
+     HOST=127.0.0.1
+     PORT=6969
+     ```
+
+3. **Install backend dependencies:**
    ```sh
    npm install
    ```
 
-3. **Start the backend server:**
+4. **Start the backend server:**
    ```sh
    npm start
    ```
 
-4. **Open the frontend:**
+5. **Open the frontend:**
    - Open `frontend/pages/loginpg.html` directly in your browser,  
      **or** use a simple HTTP server (like VS Code Live Server) for a better experience.
 
